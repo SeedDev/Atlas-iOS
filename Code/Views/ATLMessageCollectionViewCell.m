@@ -440,7 +440,7 @@ NSInteger const kATLSharedCellTag = 1000;
     }
     CGSize size = ATLTextPlainSize(text, font);
     size.width += ATLMessageBubbleLabelHorizontalPadding * 2 + ATLMessageBubbleLabelWidthMargin;
-    size.height += ATLMessageBubbleLabelVerticalPadding * 2;
+    size.height += ATLMessageBubbleLabelVerticalPadding * 2 + 0.001f;
     if (![[self sharedHeightCache] objectForKey:message.identifier]) {
         [[self sharedHeightCache] setObject:[NSValue valueWithCGSize:size] forKey:message.identifier];
     }
