@@ -218,9 +218,9 @@ NSString *const ATLConversationListViewControllerDeletionModeEveryone = @"Everyo
 
 - (void)addEditButton
 {
-    if (self.navigationItem.leftBarButtonItem) return;
+    if (self.navigationItem.rightBarButtonItem) return;
     self.editButtonItem.accessibilityLabel = @"Edit Button";
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)setupConversationDataSource
